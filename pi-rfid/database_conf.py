@@ -1,5 +1,5 @@
-#Author: Alexandre Brandao
-#Author: Rui
+#Authors: Alexandre Brandao
+#	    : Rui
 #Date  : 27/03/2020
 import sys
 import time

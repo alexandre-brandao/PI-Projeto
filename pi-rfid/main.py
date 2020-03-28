@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # Author : Alexandre Brandao
 # Date   : 29/03/2020
 
