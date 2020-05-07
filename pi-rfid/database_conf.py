@@ -43,12 +43,12 @@ def update_location(cursor, NAME, TagID, Location):
 def add_to_history(cursor, TagID, Location, ACTIVE_HISTORY=0):
 	#GET DATE AND TIME
 	DATE_TIME = time.strftime('%Y-%m-%d %H:%M:%S')
-	DATE_TIME = DATE_TIME.split(" ")
 
-	insert_stmt = ("INSERT INTO history (tag_code, location, date, time) \
-	VALUES (%s, %s, %s,%s)") 
+	insert_stmt = ("INSERT INTO history (tag_code, location, date) \
+	VALUES (%s, %s, %s)")
 
-	data = (TagID, Location, DATE_TIME[0], DATE_TIME[1])
+	data = (TagID, Location, DATE_TIME)
+
 
 	cursor.execute(insert_stmt, data)
 

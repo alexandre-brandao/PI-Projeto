@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Author : Alexandre Brandao
-#	 : 
+#	 : Rui Silva
 # Date   : 29/03/2020
 
 
@@ -9,7 +9,7 @@ from database_conf import *
 from  mfrc522 import SimpleMFRC522
 
 #General Data
-Location = "Edificio 3 - Andar 1"
+Location = "Building 3, Floor 1"
 
 reader = SimpleMFRC522()
 cnx, cursor = DBconnection()
@@ -39,6 +39,7 @@ while 1:
 		
 		
 	finally:
+		print("Connection error\n")
 		GPIO.cleanup()
 
 cursor.close() # Closes the cursor(To be ignored for now)
