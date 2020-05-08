@@ -28,15 +28,14 @@ def DBconnection():
 	return cnx, cursor
 
 #Insert cursor here
-def update_location(cursor, NAME, TagID, Location):
+def update_location(cursor, device_name, TagID, Location):
 
 	update_location = ("UPDATE prototype \
 	SET location = %s, \
-	name_reg = %s, \
-	date_reg = NOW() \
+	device = %s \
 	WHERE tag_code = %s")
 
-	values = (Location, NAME, TagID)
+	values = (Location,device_name, TagID)
 	cursor.execute(update_location, values)
 
 # Update Prototype history to database
@@ -72,9 +71,11 @@ def already_in(cursor, TagID, CurrentLocation):
 	data = (TagID)
 	cursor.execute(select_stmt, data)
 	data = cursor.fetchall()
+	
+	
+	
 
-
-	if data[0][0] == CurrentLocation: 
+	if len(data[0][0]) != 0 and  data[0][0] == CurrentLocation: 
 		return True
 
 	else :
