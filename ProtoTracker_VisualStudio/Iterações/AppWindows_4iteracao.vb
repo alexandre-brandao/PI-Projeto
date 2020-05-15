@@ -1,11 +1,11 @@
-﻿Imports MySql.Data.MySqlClient
+Imports MySql.Data.MySqlClient
 Public Class ProtoTracker
 
     Dim CurWidth As Integer = Me.Width
     Dim CurHeight As Integer = Me.Height
     Dim connection As New MySqlConnection("server=den1.mysql4.gear.host;Port=3306;database=projectpial;username=projectpial;password=Uh4r?SyJV85~")
-
-    Private Sub btnCadastro_Click(sender As Object, e As EventArgs) Handles btnCadastro.Click
+	
+	Private Sub btnCadastro_Click(sender As Object, e As EventArgs) Handles btnCadastro.Click
         currentOption.Height = btnCadastro.Height
         currentOption.Top = btnCadastro.Top
         PanelCadastro.Visible = True
@@ -21,7 +21,7 @@ Public Class ProtoTracker
         Edif.SelectedIndex = -1
 
 
-    End Sub 'feito
+    End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         currentOption.Height = btnUpdate.Height
@@ -36,7 +36,7 @@ Public Class ProtoTracker
         Edif2.SelectedIndex = -1
         Andar2.SelectedIndex = -1
 
-    End Sub 'feito
+    End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
         currentOption.Height = btnSearch.Height
@@ -51,7 +51,7 @@ Public Class ProtoTracker
         Edif1.SelectedIndex = -1
         Andar1.SelectedIndex = -1
 
-    End Sub 'feito
+    End Sub
 
     Private Sub btnRemove_Click(sender As Object, e As EventArgs) Handles btnRemove.Click
         currentOption.Height = btnRemove.Height
@@ -65,9 +65,9 @@ Public Class ProtoTracker
         TextBoxRemoveID.Text = ""
         TextBoxRemoveTag.Text = ""
 
-    End Sub 'feito
-
-    Private Sub Form1_Resize(sender As Object, e As EventArgs) Handles Me.Resize
+    End Sub
+	
+	Private Sub Form1_Resize(sender As Object, e As EventArgs) Handles Me.Resize
 
         Dim RatioHeight As Double = (Me.Height - CurHeight) / CurHeight
         Dim RatioWidth As Double = (Me.Width - CurWidth) / CurWidth
@@ -82,9 +82,9 @@ Public Class ProtoTracker
         CurHeight = Me.Height
         CurWidth = Me.Width
 
-    End Sub 'feito
-
-    Private Sub btnRegUtil_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
+    End Sub
+	
+	Private Sub btnRegUtil_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
         PanelLogin.Visible = False
         PanelRegisto.Visible = True
         PanelCadastro.Visible = False
@@ -98,7 +98,7 @@ Public Class ProtoTracker
         EmailUtilBox.Text = ""
         TelemovelBox.Text = ""
 
-    End Sub 'feito
+    End Sub
 
     Private Sub btnRegistUtil_click(sender As Object, e As EventArgs) Handles Registar_btn.Click
 
@@ -175,8 +175,8 @@ Public Class ProtoTracker
         TelemovelBox.Text = ""
 
     End Sub
-
-    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+	
+	Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
 
         Dim command As New MySqlCommand("SELECT * FROM User where email = @mail", connection)
 
@@ -253,10 +253,9 @@ Public Class ProtoTracker
             PanelRemove.Visible = False
         End If
 
-
-    End Sub 'feito
-
-    Private Sub VoltarRegisto(sender As Object, e As EventArgs) Handles PictureBox2.Click
+    End Sub
+	
+	Private Sub VoltarRegisto(sender As Object, e As EventArgs) Handles PictureBox2.Click
         PanelLogin.Visible = True
         PanelRegisto.Visible = False
         PanelCadastro.Visible = False
@@ -264,9 +263,9 @@ Public Class ProtoTracker
         PanelSearch.Visible = False
         PanelMostrarLoc.Visible = False
         PanelRemove.Visible = False
-    End Sub 'feito
-
-    Private Sub FecharAPP(sender As Object, e As EventArgs) Handles PictureBox9.Click
+    End Sub
+	
+	Private Sub FecharAPP(sender As Object, e As EventArgs) Handles PictureBox9.Click
 
         Dim SairAPP As New DialogResult
         SairAPP = MessageBox.Show("Deseja fechar a aplicação?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -284,9 +283,9 @@ Public Class ProtoTracker
             PanelMostrarLoc.Visible = False
             PanelRemove.Visible = False
         End If
-    End Sub 'feito
-
-    Private Sub FecharAppReg(sender As Object, e As EventArgs) Handles PictureBox10.Click
+    End Sub
+	
+	Private Sub FecharAppReg(sender As Object, e As EventArgs) Handles PictureBox10.Click
 
         Dim SairAPP As New DialogResult
         SairAPP = MessageBox.Show("Deseja fechar a aplicação?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -304,7 +303,7 @@ Public Class ProtoTracker
             PanelMostrarLoc.Visible = False
             PanelRemove.Visible = False
         End If
-    End Sub 'feito
+    End Sub
 
     Private Sub FecharAppCad(sender As Object, e As EventArgs) Handles PictureBox11.Click
 
@@ -324,7 +323,7 @@ Public Class ProtoTracker
             PanelMostrarLoc.Visible = False
             PanelRemove.Visible = False
         End If
-    End Sub 'feito 
+    End Sub
 
     Private Sub FecharAppUpdt(sender As Object, e As EventArgs) Handles PictureBox12.Click
 
@@ -345,7 +344,7 @@ Public Class ProtoTracker
             PanelRemove.Visible = False
         End If
 
-    End Sub 'feito
+    End Sub
 
     Private Sub FecharAppProc(sender As Object, e As EventArgs) Handles PictureBox13.Click
 
@@ -366,7 +365,7 @@ Public Class ProtoTracker
             PanelRemove.Visible = False
         End If
 
-    End Sub 'feito
+    End Sub
 
     Private Sub FecharAppRem(sender As Object, e As EventArgs) Handles PictureBox14.Click
 
@@ -387,9 +386,9 @@ Public Class ProtoTracker
             PanelRemove.Visible = True
         End If
 
-    End Sub 'feito
-
-    Private Sub Close_btn_hist(sender As Object, e As EventArgs) Handles PictureBox18.Click
+    End Sub
+	
+	Private Sub Close_btn_hist(sender As Object, e As EventArgs) Handles PictureBox18.Click
 
         Dim SairAPP As New DialogResult
         SairAPP = MessageBox.Show("Deseja fechar a aplicação?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -409,9 +408,9 @@ Public Class ProtoTracker
             PanelRemove.Visible = False
         End If
 
-    End Sub 'feito
-
-    Private Sub close_app_Loc(sender As Object, e As EventArgs) Handles PictureBox15.Click
+    End Sub
+	
+	Private Sub close_app_Loc(sender As Object, e As EventArgs) Handles PictureBox15.Click
         Dim SairAPP As New DialogResult
         SairAPP = MessageBox.Show("Deseja fechar a aplicação?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
@@ -430,9 +429,9 @@ Public Class ProtoTracker
             PanelMostrarLoc.Visible = True
             PanelMostrarProt.Visible = False
         End If
-    End Sub 'feito
-
-    Private Sub btnBack_click(sender As Object, e As EventArgs) Handles PictureBox7.Click
+    End Sub
+	
+	Private Sub btnBack_click(sender As Object, e As EventArgs) Handles PictureBox7.Click
 
         Dim SairSessão As New DialogResult
         SairSessão = MessageBox.Show("Deseja terminar sessao?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -460,9 +459,9 @@ Public Class ProtoTracker
             PanelMostrarLoc.Visible = False
             PanelRemove.Visible = False
         End If
-    End Sub 'feito
-
-    Private Sub btnCadastrar_click(sender As Object, e As EventArgs) Handles btnConfirmRegister.Click
+    End Sub
+	
+	Private Sub btnCadastrar_click(sender As Object, e As EventArgs) Handles btnConfirmRegister.Click
 
         Dim Location As String
         Location = "Building " & Edif.SelectedItem & ", Floor " & Andar.SelectedItem
@@ -521,17 +520,17 @@ Public Class ProtoTracker
 
         Else
 
-            Dim command As New MySqlCommand("INSERT INTO `Prototype`(`tag_code`,`name`,`prototype_id`,`project`,`location`,`name_reg`,`date_reg`,`device`) VALUES (@cod,@nome,@id,@proj,@loc,@Rg_mail,@Rg_data,@dev)", connection)
+            Dim Command As New MySqlCommand("INSERT INTO `Prototype`(`tag_code`,`name`,`prototype_id`,`project`,`location`,`name_reg`,`date_reg`,`device`) VALUES (@cod,@nome,@id,@proj,@loc,@Rg_mail,@Rg_data,@dev)", connection)
 
-            command.Parameters.Add("cod", MySqlDbType.VarChar).Value = TagBox.Text
-            command.Parameters.Add("nome", MySqlDbType.VarChar).Value = NomeBox.Text
-            command.Parameters.Add("id", MySqlDbType.VarChar).Value = IdBox.Text
-            command.Parameters.Add("proj", MySqlDbType.VarChar).Value = ProjetoBox.Text
-            command.Parameters.Add("loc", MySqlDbType.VarChar).Value = Location
+            Command.Parameters.Add("cod", MySqlDbType.VarChar).Value = TagBox.Text
+            Command.Parameters.Add("nome", MySqlDbType.VarChar).Value = NomeBox.Text
+            Command.Parameters.Add("id", MySqlDbType.VarChar).Value = IdBox.Text
+            Command.Parameters.Add("proj", MySqlDbType.VarChar).Value = ProjetoBox.Text
+            Command.Parameters.Add("loc", MySqlDbType.VarChar).Value = Location
 
-            command.Parameters.Add("Rg_mail", MySqlDbType.VarChar).Value = TextBoxEmail.Text
-            command.Parameters.Add("Rg_data", MySqlDbType.DateTime).Value = Now
-            command.Parameters.Add("dev", MySqlDbType.VarChar).Value = "Aplicação Windows"
+            Command.Parameters.Add("Rg_mail", MySqlDbType.VarChar).Value = TextBoxEmail.Text
+            Command.Parameters.Add("Rg_data", MySqlDbType.DateTime).Value = Now
+            Command.Parameters.Add("dev", MySqlDbType.VarChar).Value = "Aplicação Windows"
 
             Dim command2 As New MySqlCommand("INSERT INTO `History`(`date`,`tag_code`,`location`) VALUES (@data,@tag,@loc2)", connection)
 
@@ -541,7 +540,7 @@ Public Class ProtoTracker
 
             connection.Open()
 
-            If command.ExecuteNonQuery() = 1 And command2.ExecuteNonQuery() = 1 Then
+            If Command.ExecuteNonQuery() = 1 And command2.ExecuteNonQuery() = 1 Then
                 MessageBox.Show("Protótipo cadastrado com sucesso!")
 
                 TagBox.Text = ""
@@ -565,9 +564,9 @@ Public Class ProtoTracker
             PanelRemove.Visible = False
         End If
 
-    End Sub 'feito
-
-    Private Sub btnAtualizar(sender As Object, e As EventArgs) Handles btnConfirmUpdate.Click
+    End Sub
+	
+	Private Sub btnAtualizar(sender As Object, e As EventArgs) Handles btnConfirmUpdate.Click
 
 
         If CodTagBox.Text = "" Or IDAtualizarBox.Text = "" Then
@@ -639,18 +638,18 @@ Public Class ProtoTracker
         PanelMostrarLoc.Visible = False
         PanelRemove.Visible = False
 
-    End Sub 'feito
-
-    Private Sub btn_update_block(sender As Object, e As EventArgs) Handles Button1.Click
+    End Sub
+	
+	Private Sub btn_update_block(sender As Object, e As EventArgs) Handles Button1.Click
         Panel2.Height = Button1.Height
         Panel2.Top = Button1.Top
         PanelCadastro.Visible = False
         PanelUpdate.Visible = True
         PanelSearch.Visible = False
         PanelRemove.Visible = False
-    End Sub 'feito
-
-    Private Sub btn_backblock(sender As Object, e As EventArgs) Handles PictureBox17.Click
+    End Sub
+	
+	Private Sub btn_backblock(sender As Object, e As EventArgs) Handles PictureBox17.Click
 
         Dim SairSessão As New DialogResult
         SairSessão = MessageBox.Show("Deseja terminar sessao?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -679,9 +678,9 @@ Public Class ProtoTracker
             PanelRemove.Visible = False
         End If
 
-    End Sub 'feito
-
-    Private Sub ProcLoc_clibk(sender As Object, e As EventArgs) Handles btnConfirmSearch.Click
+    End Sub
+	
+	Private Sub ProcLoc_clibk(sender As Object, e As EventArgs) Handles btnConfirmSearch.Click
 
 
 
@@ -797,24 +796,24 @@ Public Class ProtoTracker
         IDSearchTextBox.Text = ""
         Edif1.SelectedIndex = -1
         Andar1.SelectedIndex = -1
-    End Sub 'feito
-
-    Private Sub btn_proc_block(sender As Object, e As EventArgs) Handles Button2.Click
+    End Sub
+	
+	Private Sub btn_proc_block(sender As Object, e As EventArgs) Handles Button2.Click
         Panel2.Height = Button2.Height
         Panel2.Top = Button2.Top
         PanelCadastro.Visible = False
         PanelUpdate.Visible = False
         PanelSearch.Visible = True
         PanelRemove.Visible = False
-    End Sub 'feito
+    End Sub
+	
+	Private Sub History_btn_Click(sender As Object, e As EventArgs) Handles History_btn.Click
 
-    Private Sub History_btn_Click(sender As Object, e As EventArgs) Handles History_btn.Click
+        Dim Command As New MySqlCommand("SELECT location, date FROM history where tag_code = @tag_cod order by date desc", connection)
 
-        Dim command As New MySqlCommand("SELECT location, date FROM history where tag_code = @tag_cod order by date desc", connection)
+        Command.Parameters.Add("@tag_cod", MySqlDbType.VarChar).Value = Cod_tag_Box.Text
 
-        command.Parameters.Add("@tag_cod", MySqlDbType.VarChar).Value = Cod_tag_Box.Text
-
-        Dim adapter As New MySqlDataAdapter(command)
+        Dim adapter As New MySqlDataAdapter(Command)
         Dim table As New DataTable()
         adapter.Fill(table)
 
@@ -845,9 +844,9 @@ Public Class ProtoTracker
         PanelRemove.Visible = False
 
 
-    End Sub 'feito
-
-    Private Sub seta_click(sender As Object, e As EventArgs) Handles PictureBox22.Click
+    End Sub
+	
+	Private Sub seta_click(sender As Object, e As EventArgs) Handles PictureBox22.Click
 
         PanelLogin.Visible = False
         PanelRegisto.Visible = False
@@ -858,9 +857,9 @@ Public Class ProtoTracker
         PanelMostrarProt.Visible = False
         PanelRemove.Visible = False
 
-    End Sub 'feito
-
-    Private Sub Remove_prot(sender As Object, e As EventArgs) Handles btnConfirmRemove.Click
+    End Sub
+	
+	Private Sub Remove_prot(sender As Object, e As EventArgs) Handles btnConfirmRemove.Click
 
         If TextBoxRemoveTag.Text = "" Or TextBoxRemoveID.Text = "" Then
 
@@ -907,12 +906,12 @@ Public Class ProtoTracker
                         Codigo_Tag2 = table6.Rows(0)(0).ToString
 
 
-                        Dim command As New MySqlCommand("DELETE FROM prototype where tag_code = @tag_cod", connection)
+                        Dim Command As New MySqlCommand("DELETE FROM prototype where tag_code = @tag_cod", connection)
 
-                        command.Parameters.Add("@tag_cod", MySqlDbType.VarChar).Value = TextBoxRemoveTag.Text
+                        Command.Parameters.Add("@tag_cod", MySqlDbType.VarChar).Value = TextBoxRemoveTag.Text
 
                         connection.Open()
-                        If command.ExecuteNonQuery() Then
+                        If Command.ExecuteNonQuery() Then
                             MessageBox.Show("Protótipo apagado com sucesso!")
                         End If
                         connection.Close()
@@ -958,7 +957,10 @@ Public Class ProtoTracker
             End If
 
         End If
-    End Sub 'feito
-
-
+    End Sub
+	
 End Class
+	
+	
+	
+	
