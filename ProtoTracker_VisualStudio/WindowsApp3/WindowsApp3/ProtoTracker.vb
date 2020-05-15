@@ -20,6 +20,7 @@ Public Class ProtoTracker
         Andar.SelectedIndex = -1
         Edif.SelectedIndex = -1
 
+
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click

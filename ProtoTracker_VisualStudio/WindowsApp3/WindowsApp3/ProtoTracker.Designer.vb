@@ -23,17 +23,9 @@ Partial Class ProtoTracker
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ProtoTracker))
-        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.PanelLeft = New System.Windows.Forms.Panel()
-        Me.PictureBox21 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.currentOption = New System.Windows.Forms.Panel()
-        Me.btnCadastro = New System.Windows.Forms.Button()
-        Me.btnUpdate = New System.Windows.Forms.Button()
-        Me.btnSearch = New System.Windows.Forms.Button()
-        Me.btnRemove = New System.Windows.Forms.Button()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PanelCadastro = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Andar = New System.Windows.Forms.ComboBox()
@@ -142,9 +134,14 @@ Partial Class ProtoTracker
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.PictureBox18 = New System.Windows.Forms.PictureBox()
         Me.PictureBox19 = New System.Windows.Forms.PictureBox()
-        Me.PanelLeft.SuspendLayout()
-        CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.btnRemove = New System.Windows.Forms.Button()
+        Me.btnSearch = New System.Windows.Forms.Button()
+        Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.btnCadastro = New System.Windows.Forms.Button()
+        Me.currentOption = New System.Windows.Forms.Panel()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox21 = New System.Windows.Forms.PictureBox()
+        Me.PanelLeft = New System.Windows.Forms.Panel()
         Me.PanelCadastro.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -175,74 +172,10 @@ Partial Class ProtoTracker
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelLeft.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'PanelLeft
-        '
-        resources.ApplyResources(Me.PanelLeft, "PanelLeft")
-        Me.PanelLeft.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(197, Byte), Integer), CType(CType(243, Byte), Integer))
-        Me.PanelLeft.Controls.Add(Me.PictureBox21)
-        Me.PanelLeft.Controls.Add(Me.PictureBox7)
-        Me.PanelLeft.Controls.Add(Me.currentOption)
-        Me.PanelLeft.Controls.Add(Me.btnCadastro)
-        Me.PanelLeft.Controls.Add(Me.btnUpdate)
-        Me.PanelLeft.Controls.Add(Me.btnSearch)
-        Me.PanelLeft.Controls.Add(Me.btnRemove)
-        Me.PanelLeft.Name = "PanelLeft"
-        '
-        'PictureBox21
-        '
-        resources.ApplyResources(Me.PictureBox21, "PictureBox21")
-        Me.PictureBox21.Name = "PictureBox21"
-        Me.PictureBox21.TabStop = False
-        '
-        'PictureBox7
-        '
-        Me.PictureBox7.Image = Global.ProtoTracker.My.Resources.Resources.signout1
-        resources.ApplyResources(Me.PictureBox7, "PictureBox7")
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.TabStop = False
-        '
-        'currentOption
-        '
-        Me.currentOption.BackColor = System.Drawing.SystemColors.Control
-        Me.currentOption.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        resources.ApplyResources(Me.currentOption, "currentOption")
-        Me.currentOption.Name = "currentOption"
-        '
-        'btnCadastro
-        '
-        Me.btnCadastro.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.btnCadastro.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.btnCadastro, "btnCadastro")
-        Me.btnCadastro.ForeColor = System.Drawing.SystemColors.Control
-        Me.btnCadastro.Name = "btnCadastro"
-        Me.btnCadastro.UseVisualStyleBackColor = True
-        '
-        'btnUpdate
-        '
-        Me.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.btnUpdate.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.btnUpdate, "btnUpdate")
-        Me.btnUpdate.ForeColor = System.Drawing.SystemColors.Control
-        Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.UseVisualStyleBackColor = True
-        '
-        'btnSearch
-        '
-        Me.btnSearch.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.btnSearch, "btnSearch")
-        Me.btnSearch.ForeColor = System.Drawing.SystemColors.Control
-        Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.UseVisualStyleBackColor = True
-        '
-        'btnRemove
-        '
-        Me.btnRemove.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.btnRemove, "btnRemove")
-        Me.btnRemove.ForeColor = System.Drawing.SystemColors.Control
-        Me.btnRemove.Name = "btnRemove"
-        Me.btnRemove.UseVisualStyleBackColor = True
         '
         'PanelCadastro
         '
@@ -879,7 +812,6 @@ Partial Class ProtoTracker
         '
         'PanelLeftBlock
         '
-        resources.ApplyResources(Me.PanelLeftBlock, "PanelLeftBlock")
         Me.PanelLeftBlock.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(197, Byte), Integer), CType(CType(243, Byte), Integer))
         Me.PanelLeftBlock.Controls.Add(Me.PictureBox20)
         Me.PanelLeftBlock.Controls.Add(Me.PictureBox17)
@@ -888,6 +820,7 @@ Partial Class ProtoTracker
         Me.PanelLeftBlock.Controls.Add(Me.Button2)
         Me.PanelLeftBlock.Controls.Add(Me.Button4)
         Me.PanelLeftBlock.Controls.Add(Me.Button3)
+        resources.ApplyResources(Me.PanelLeftBlock, "PanelLeftBlock")
         Me.PanelLeftBlock.Name = "PanelLeftBlock"
         '
         'PictureBox20
@@ -989,33 +922,33 @@ Partial Class ProtoTracker
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AllowUserToResizeColumns = False
         Me.DataGridView1.AllowUserToResizeRows = False
-        DataGridViewCellStyle25.BackColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle25.Font = New System.Drawing.Font("Dubai", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption
-        DataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle25
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Dubai", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        DataGridViewCellStyle26.Font = New System.Drawing.Font("Dubai", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle26
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Dubai", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         resources.ApplyResources(Me.DataGridView1, "DataGridView1")
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle27.Font = New System.Drawing.Font("Dubai", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption
-        DataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle27
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Dubai", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.DataGridView1.MultiSelect = False
         Me.DataGridView1.Name = "DataGridView1"
@@ -1036,6 +969,73 @@ Partial Class ProtoTracker
         Me.PictureBox19.Name = "PictureBox19"
         Me.PictureBox19.TabStop = False
         '
+        'btnRemove
+        '
+        Me.btnRemove.FlatAppearance.BorderSize = 0
+        resources.ApplyResources(Me.btnRemove, "btnRemove")
+        Me.btnRemove.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnRemove.Name = "btnRemove"
+        Me.btnRemove.UseVisualStyleBackColor = True
+        '
+        'btnSearch
+        '
+        Me.btnSearch.FlatAppearance.BorderSize = 0
+        resources.ApplyResources(Me.btnSearch, "btnSearch")
+        Me.btnSearch.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.UseVisualStyleBackColor = True
+        '
+        'btnUpdate
+        '
+        Me.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.btnUpdate.FlatAppearance.BorderSize = 0
+        resources.ApplyResources(Me.btnUpdate, "btnUpdate")
+        Me.btnUpdate.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.UseVisualStyleBackColor = True
+        '
+        'btnCadastro
+        '
+        Me.btnCadastro.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.btnCadastro.FlatAppearance.BorderSize = 0
+        resources.ApplyResources(Me.btnCadastro, "btnCadastro")
+        Me.btnCadastro.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnCadastro.Name = "btnCadastro"
+        Me.btnCadastro.UseVisualStyleBackColor = True
+        '
+        'currentOption
+        '
+        Me.currentOption.BackColor = System.Drawing.SystemColors.Control
+        Me.currentOption.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        resources.ApplyResources(Me.currentOption, "currentOption")
+        Me.currentOption.Name = "currentOption"
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.Image = Global.ProtoTracker.My.Resources.Resources.signout1
+        resources.ApplyResources(Me.PictureBox7, "PictureBox7")
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.TabStop = False
+        '
+        'PictureBox21
+        '
+        resources.ApplyResources(Me.PictureBox21, "PictureBox21")
+        Me.PictureBox21.Name = "PictureBox21"
+        Me.PictureBox21.TabStop = False
+        '
+        'PanelLeft
+        '
+        Me.PanelLeft.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(197, Byte), Integer), CType(CType(243, Byte), Integer))
+        Me.PanelLeft.Controls.Add(Me.PictureBox21)
+        Me.PanelLeft.Controls.Add(Me.PictureBox7)
+        Me.PanelLeft.Controls.Add(Me.currentOption)
+        Me.PanelLeft.Controls.Add(Me.btnCadastro)
+        Me.PanelLeft.Controls.Add(Me.btnUpdate)
+        Me.PanelLeft.Controls.Add(Me.btnSearch)
+        Me.PanelLeft.Controls.Add(Me.btnRemove)
+        resources.ApplyResources(Me.PanelLeft, "PanelLeft")
+        Me.PanelLeft.Name = "PanelLeft"
+        '
         'ProtoTracker
         '
         resources.ApplyResources(Me, "$this")
@@ -1054,9 +1054,6 @@ Partial Class ProtoTracker
         Me.Controls.Add(Me.PanelLeftBlock)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "ProtoTracker"
-        Me.PanelLeft.ResumeLayout(False)
-        CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelCadastro.ResumeLayout(False)
         Me.PanelCadastro.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1095,17 +1092,14 @@ Partial Class ProtoTracker
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelLeft.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents PanelLeft As Panel
-    Friend WithEvents btnUpdate As Button
-    Friend WithEvents btnSearch As Button
-    Friend WithEvents btnRemove As Button
     Friend WithEvents PanelCadastro As Panel
-    Friend WithEvents currentOption As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents NomeBox As TextBox
     Friend WithEvents IdBox As TextBox
@@ -1148,7 +1142,6 @@ Partial Class ProtoTracker
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents PictureBox7 As PictureBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
@@ -1208,12 +1201,18 @@ Partial Class ProtoTracker
     Friend WithEvents reg_prot As TextBox
     Friend WithEvents afas As Label
     Friend WithEvents proj_prot As TextBox
-    Friend WithEvents btnCadastro As Button
     Friend WithEvents PictureBox20 As PictureBox
-    Friend WithEvents PictureBox21 As PictureBox
     Friend WithEvents titulo As TextBox
     Friend WithEvents PictureBox22 As PictureBox
     Friend WithEvents titulo2 As TextBox
     Friend WithEvents Label22 As Label
     Friend WithEvents Label16 As Label
+    Friend WithEvents btnRemove As Button
+    Friend WithEvents btnSearch As Button
+    Friend WithEvents btnUpdate As Button
+    Friend WithEvents btnCadastro As Button
+    Friend WithEvents currentOption As Panel
+    Friend WithEvents PictureBox7 As PictureBox
+    Friend WithEvents PictureBox21 As PictureBox
+    Friend WithEvents PanelLeft As Panel
 End Class
