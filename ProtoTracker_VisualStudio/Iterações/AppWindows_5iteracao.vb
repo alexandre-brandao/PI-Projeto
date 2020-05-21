@@ -1,4 +1,4 @@
-﻿'Aplicação para Computador - IDENTIFICAÇÃO, CADASTRO E RASTREABILIDADE DE PRODUTOS
+'Aplicação para Computador - IDENTIFICAÇÃO, CADASTRO E RASTREABILIDADE DE PRODUTOS
 'Equipa 11 Projeto Industrial
 '2019/2020
 
@@ -112,11 +112,11 @@ Public Class ProtoTracker
     'Botão "Registar-se" no painel de registo de um utilizador. Confirma o registo do utilizador no sistema
     Private Sub btnRegistUtil_click(sender As Object, e As EventArgs) Handles Registar_btn.Click
 
-        Dim command As New MySqlCommand("SELECT * FROM User where email = @mail", connection)
+        Dim Command As New MySqlCommand("SELECT * FROM User where email = @mail", connection)
 
-        command.Parameters.Add("@mail", MySqlDbType.VarChar).Value = EmailUtilBox.Text
+        Command.Parameters.Add("@mail", MySqlDbType.VarChar).Value = EmailUtilBox.Text
 
-        Dim adapter As New MySqlDataAdapter(command)
+        Dim adapter As New MySqlDataAdapter(Command)
         Dim table As New DataTable()
         adapter.Fill(table)
 
@@ -189,11 +189,11 @@ Public Class ProtoTracker
     'Botão "Login". Inicia sessão no sistema 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
 
-        Dim command As New MySqlCommand("SELECT * FROM User where email = @mail", connection)
+        Dim Command As New MySqlCommand("SELECT * FROM User where email = @mail", connection)
 
-        command.Parameters.Add("@mail", MySqlDbType.VarChar).Value = TextBoxEmail.Text
+        Command.Parameters.Add("@mail", MySqlDbType.VarChar).Value = TextBoxEmail.Text
 
-        Dim adapter As New MySqlDataAdapter(command)
+        Dim adapter As New MySqlDataAdapter(Command)
         Dim table As New DataTable()
         adapter.Fill(table)
 
@@ -537,17 +537,17 @@ Public Class ProtoTracker
 
         Else
 
-            Dim command As New MySqlCommand("INSERT INTO `Prototype`(`tag_code`,`name`,`prototype_id`,`project`,`location`,`name_reg`,`date_reg`,`device`) VALUES (@cod,@nome,@id,@proj,@loc,@Rg_mail,@Rg_data,@dev)", connection)
+            Dim Command As New MySqlCommand("INSERT INTO `Prototype`(`tag_code`,`name`,`prototype_id`,`project`,`location`,`name_reg`,`date_reg`,`device`) VALUES (@cod,@nome,@id,@proj,@loc,@Rg_mail,@Rg_data,@dev)", connection)
 
-            command.Parameters.Add("cod", MySqlDbType.VarChar).Value = TagBox.Text
-            command.Parameters.Add("nome", MySqlDbType.VarChar).Value = NomeBox.Text
-            command.Parameters.Add("id", MySqlDbType.VarChar).Value = IdBox.Text
-            command.Parameters.Add("proj", MySqlDbType.VarChar).Value = ProjetoBox.Text
-            command.Parameters.Add("loc", MySqlDbType.VarChar).Value = Location
+            Command.Parameters.Add("cod", MySqlDbType.VarChar).Value = TagBox.Text
+            Command.Parameters.Add("nome", MySqlDbType.VarChar).Value = NomeBox.Text
+            Command.Parameters.Add("id", MySqlDbType.VarChar).Value = IdBox.Text
+            Command.Parameters.Add("proj", MySqlDbType.VarChar).Value = ProjetoBox.Text
+            Command.Parameters.Add("loc", MySqlDbType.VarChar).Value = Location
 
-            command.Parameters.Add("Rg_mail", MySqlDbType.VarChar).Value = TextBoxEmail.Text
-            command.Parameters.Add("Rg_data", MySqlDbType.DateTime).Value = Now
-            command.Parameters.Add("dev", MySqlDbType.VarChar).Value = "Aplicação Windows"
+            Command.Parameters.Add("Rg_mail", MySqlDbType.VarChar).Value = TextBoxEmail.Text
+            Command.Parameters.Add("Rg_data", MySqlDbType.DateTime).Value = Now
+            Command.Parameters.Add("dev", MySqlDbType.VarChar).Value = "Aplicação Windows"
 
             Dim command2 As New MySqlCommand("INSERT INTO `History`(`date`,`tag_code`,`location`) VALUES (@data,@tag,@loc2)", connection)
 
@@ -557,7 +557,7 @@ Public Class ProtoTracker
 
             connection.Open()
 
-            If command.ExecuteNonQuery() = 1 And command2.ExecuteNonQuery() = 1 Then
+            If Command.ExecuteNonQuery() = 1 And command2.ExecuteNonQuery() = 1 Then
                 MessageBox.Show("Protótipo cadastrado com sucesso!")
 
                 TagBox.Text = ""
@@ -610,11 +610,11 @@ Public Class ProtoTracker
 
             If table1.Rows.Count() = 0 Then
 
-                Dim command As New MySqlCommand("SELECT * FROM Prototype where tag_code = @cod_tag", connection)
+                Dim Command As New MySqlCommand("SELECT * FROM Prototype where tag_code = @cod_tag", connection)
 
-                command.Parameters.Add("@cod_tag", MySqlDbType.VarChar).Value = CodTagBox.Text
+                Command.Parameters.Add("@cod_tag", MySqlDbType.VarChar).Value = CodTagBox.Text
 
-                Dim adapter As New MySqlDataAdapter(command)
+                Dim adapter As New MySqlDataAdapter(Command)
                 Dim table As New DataTable()
                 adapter.Fill(table)
 
@@ -921,11 +921,11 @@ Public Class ProtoTracker
     'Botão que, ao ser clicado, mostra o histórico de localizações de um determinado protótipo
     Private Sub History_btn_Click(sender As Object, e As EventArgs) Handles History_btn.Click
 
-        Dim command As New MySqlCommand("SELECT location, date FROM history where tag_code = @tag_cod order by date desc", connection)
+        Dim Command As New MySqlCommand("SELECT location, date FROM history where tag_code = @tag_cod order by date desc", connection)
 
-        command.Parameters.Add("@tag_cod", MySqlDbType.VarChar).Value = Cod_tag_Box.Text
+        Command.Parameters.Add("@tag_cod", MySqlDbType.VarChar).Value = Cod_tag_Box.Text
 
-        Dim adapter As New MySqlDataAdapter(command)
+        Dim adapter As New MySqlDataAdapter(Command)
         Dim table As New DataTable()
         adapter.Fill(table)
 
@@ -1012,13 +1012,13 @@ Public Class ProtoTracker
                     Codigo_Tag2 = table6.Rows(0)(0).ToString
 
 
-                    Dim command As New MySqlCommand("DELETE FROM prototype where tag_code = @tag_cod", connection)
+                    Dim Command As New MySqlCommand("DELETE FROM prototype where tag_code = @tag_cod", connection)
 
-                    command.Parameters.Add("@tag_cod", MySqlDbType.VarChar).Value = TextBoxRemoveTag.Text
+                    Command.Parameters.Add("@tag_cod", MySqlDbType.VarChar).Value = TextBoxRemoveTag.Text
 
                     connection.Open()
 
-                    If command.ExecuteNonQuery() Then
+                    If Command.ExecuteNonQuery() Then
                         MessageBox.Show("Protótipo apagado com sucesso!")
                     End If
                     connection.Close()

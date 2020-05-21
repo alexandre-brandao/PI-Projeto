@@ -628,16 +628,16 @@
     <value>Dubai, 14.25pt</value>
   </data>
   <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>230, 193</value>
+    <value>136, 193</value>
   </data>
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 32</value>
+    <value>131, 32</value>
   </data>
   <data name="Label2.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
   <data name="Label2.Text" xml:space="preserve">
-    <value>ID:</value>
+    <value>Serial Number:</value>
   </data>
   <data name="&gt;&gt;Label2.Name" xml:space="preserve">
     <value>Label2</value>
@@ -1177,16 +1177,16 @@
     <value>Dubai, 14.25pt</value>
   </data>
   <data name="Label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>230, 224</value>
+    <value>136, 169</value>
   </data>
   <data name="Label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 32</value>
+    <value>131, 32</value>
   </data>
   <data name="Label9.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
   <data name="Label9.Text" xml:space="preserve">
-    <value>ID:</value>
+    <value>Serial Number:</value>
   </data>
   <data name="&gt;&gt;Label9.Name" xml:space="preserve">
     <value>Label9</value>
@@ -1207,7 +1207,7 @@
     <value>Dubai, 14.25pt</value>
   </data>
   <data name="Label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>160, 160</value>
+    <value>160, 226</value>
   </data>
   <data name="Label10.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 32</value>
@@ -1234,7 +1234,7 @@
     <value>Dubai, 12pt</value>
   </data>
   <data name="IDAtualizarBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>270, 223</value>
+    <value>270, 168</value>
   </data>
   <data name="IDAtualizarBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>193, 35</value>
@@ -1258,7 +1258,7 @@
     <value>Dubai, 12pt</value>
   </data>
   <data name="CodTagBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>270, 160</value>
+    <value>270, 226</value>
   </data>
   <data name="CodTagBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>193, 35</value>
@@ -1557,17 +1557,20 @@
   <data name="Label16.Font" type="System.Drawing.Font, System.Drawing">
     <value>Dubai, 11.999999pt, style=Bold</value>
   </data>
+  <data name="Label16.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="Label16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>259, 149</value>
+    <value>209, 149</value>
   </data>
   <data name="Label16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 27</value>
+    <value>309, 27</value>
   </data>
   <data name="Label16.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
   </data>
   <data name="Label16.Text" xml:space="preserve">
-    <value>Procurar por Código Tag e ID:</value>
+    <value>Procurar por Serial Number ou Código Tag:</value>
   </data>
   <data name="&gt;&gt;Label16.Name" xml:space="preserve">
     <value>Label16</value>
@@ -1789,16 +1792,16 @@
     <value>Dubai, 14.25pt</value>
   </data>
   <data name="Label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>230, 236</value>
+    <value>135, 196</value>
   </data>
   <data name="Label11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 32</value>
+    <value>131, 32</value>
   </data>
   <data name="Label11.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
   <data name="Label11.Text" xml:space="preserve">
-    <value>ID:</value>
+    <value>Serial Number:</value>
   </data>
   <data name="&gt;&gt;Label11.Name" xml:space="preserve">
     <value>Label11</value>
@@ -1819,7 +1822,7 @@
     <value>Dubai, 14.25pt</value>
   </data>
   <data name="Label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>160, 189</value>
+    <value>159, 246</value>
   </data>
   <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 32</value>
@@ -1873,7 +1876,7 @@
     <value>Dubai, 11.999999pt</value>
   </data>
   <data name="IDSearchTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>270, 235</value>
+    <value>269, 195</value>
   </data>
   <data name="IDSearchTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>193, 35</value>
@@ -1897,7 +1900,7 @@
     <value>Dubai, 11.999999pt</value>
   </data>
   <data name="CodTagSearchBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>270, 189</value>
+    <value>269, 246</value>
   </data>
   <data name="CodTagSearchBox.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>193, 35</value>
@@ -2083,16 +2086,16 @@
     <value>NoControl</value>
   </data>
   <data name="Label13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>230, 261</value>
+    <value>136, 195</value>
   </data>
   <data name="Label13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 32</value>
+    <value>131, 32</value>
   </data>
   <data name="Label13.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
   </data>
   <data name="Label13.Text" xml:space="preserve">
-    <value>ID:</value>
+    <value>Serial Number:</value>
   </data>
   <data name="&gt;&gt;Label13.Name" xml:space="preserve">
     <value>Label13</value>
@@ -2113,7 +2116,7 @@
     <value>Dubai, 14.25pt</value>
   </data>
   <data name="Label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>160, 195</value>
+    <value>160, 266</value>
   </data>
   <data name="Label12.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 32</value>
@@ -2167,7 +2170,7 @@
     <value>Dubai, 11.999999pt</value>
   </data>
   <data name="TextBoxRemoveID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>270, 259</value>
+    <value>270, 194</value>
   </data>
   <data name="TextBoxRemoveID.Size" type="System.Drawing.Size, System.Drawing">
     <value>193, 35</value>
@@ -2191,7 +2194,7 @@
     <value>Dubai, 11.999999pt</value>
   </data>
   <data name="TextBoxRemoveTag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>270, 194</value>
+    <value>270, 265</value>
   </data>
   <data name="TextBoxRemoveTag.Size" type="System.Drawing.Size, System.Drawing">
     <value>193, 35</value>
@@ -3547,16 +3550,16 @@
     <value>Dubai, 14.25pt</value>
   </data>
   <data name="Id_prot.Location" type="System.Drawing.Point, System.Drawing">
-    <value>197, 211</value>
+    <value>103, 211</value>
   </data>
   <data name="Id_prot.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 32</value>
+    <value>131, 32</value>
   </data>
   <data name="Id_prot.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
   </data>
   <data name="Id_prot.Text" xml:space="preserve">
-    <value>ID:</value>
+    <value>Serial Number:</value>
   </data>
   <data name="&gt;&gt;Id_prot.Name" xml:space="preserve">
     <value>Id_prot</value>
@@ -7549,9 +7552,6 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>834, 451</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>850, 490</value>

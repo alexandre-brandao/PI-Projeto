@@ -79,14 +79,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoTracker.exe" size="575504">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoTracker.exe" size="576528">
       <assemblyIdentity name="ProtoTracker" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yzktkuOCFBVCTTQ3jikpaWlO7cAtxki85o+KeptDrLY=</dsig:DigestValue>
+        <dsig:DigestValue>25rYq06d4EEWG3wRoMxAxfDxTq2o5yspsU2CLSceSsA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -98,7 +98,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>TVUuJxEl5PS8/XWA4hn6XLjbrJoRWonMKcXANO5DIug=</dsig:DigestValue>
+        <dsig:DigestValue>cLpUdncRCAx58k7CH94RPEvY8B9Uydvo++bRVaOI71M=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
