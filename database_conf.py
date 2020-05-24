@@ -71,11 +71,8 @@ def already_in(cursor, TagID, CurrentLocation):
 	data = (TagID)
 	cursor.execute(select_stmt, data)
 	data = cursor.fetchall()
-	
-	
-	
 
-	if len(data[0][0]) != 0 and  data[0][0] == CurrentLocation: 
+	if len(data) != 0 and  data[0][0] == CurrentLocation: 
 		return True
 
 	else :

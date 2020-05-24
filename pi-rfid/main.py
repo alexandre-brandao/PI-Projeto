@@ -1,4 +1,5 @@
-#!/usr/bin/env python3 Author : Alexandre Brandao
+#!/usr/bin/env python3 
+#Author : Alexandre Brandao
 #	 : Rui Silva
 # Date   : 29/03/2020
 
@@ -29,20 +30,20 @@ while 1:
 			update_location(cursor, "Raspberry Reader", id, "OUTSIDE")
 			#Update history data related to the Prototype
 			add_to_history(cursor, id, "OUTSIDE")
-			print("OUTSIDE")
+			print("OUTSIDE\n")
 		else:
-			print(Location)
+			print(Location+"\n")
 			#Update data
 			update_location(cursor, "Raspberry Reader", id, Location)
 			#Update history data related to the Prototype
 			add_to_history(cursor, id, Location)
-			
 			
 		cnx.commit()   # uploads data to the database
 		
 		
 	finally:
 		GPIO.cleanup()
+		print("", end='')
 
 cursor.close() # Closes the cursor(To be ignored for now)
 
