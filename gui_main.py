@@ -11,6 +11,9 @@ from tkinter import *
 
 #General Data
 
+def initorder():
+    initvar = 1
+    
 def normalstate():
     maincanvas.itemconfigure(entryid, state='hidden')
     maincanvas.itemconfigure(exitid, state='hidden')
@@ -80,10 +83,17 @@ maincanvas.itemconfigure(exitid, state='hidden')
 maincanvas.itemconfigure(logoid, state='normal')
 maincanvas.pack()
 
+#initbutton = Button(prototracker, text = "Iniciar", command = initorder)
+#initbutton_window = maincanvas.create_window(600,250,anchor = NW, window = initbutton)
+
 Location = "Building 3, Floor 1"
 reader = SimpleMFRC522()
 name = '0'
-interaction = 2
+initvar = 0
+
+prototracker.update_idletasks()
+prototracker.update()
+time.sleep(0.01)
 		
 while 1:
     #maincanvas.after(1500,lambda: maincanvas.itemconfigure(entryid, state='hidden'))
@@ -95,11 +105,7 @@ while 1:
     if name != '0':
         mainexec(Location,id,name)
         #prototracker.after(30000, mainexec(Location))
-        
-    #maincanvas.after(1500,normalstate())
-    prototracker.update_idletasks()
-    prototracker.update()
-    time.sleep(0.01)
+        #maincanvas.after(1500,normalstate())
 
 
 

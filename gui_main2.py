@@ -88,6 +88,8 @@ Location = "Building 3, Floor 1"
 reader = SimpleMFRC522()
 name = '0'
 interaction = 3
+
+
 		
 while 1:
     #maincanvas.after(1500,lambda: maincanvas.itemconfigure(entryid, state='hidden'))
