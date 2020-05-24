@@ -17,11 +17,15 @@ def normalstate():
 
 def entrydetected():
     maincanvas.itemconfigure(entryid, state='normal')
-    maincanvas.after(1500,lambda: maincanvas.itemconfigure(entryid, state='hidden'))
+    time.sleep(1)
+    maincanvas.after(500,lambda: maincanvas.itemconfigure(entryid, state='hidden'))
+    interaction = 2
 
 def exitdetected():
     maincanvas.itemconfigure(exitid, state='normal')
-    maincanvas.after(1500,lambda: maincanvas.itemconfigure(exitid, state='hidden'))
+    time.sleep(1)
+    maincanvas.after(500,lambda: maincanvas.itemconfigure(exitid, state='hidden'))
+    interaction = 2
 
 def mainexec(Location,id,name):
     Connected = 0
@@ -36,22 +40,22 @@ def mainexec(Location,id,name):
     try:
         print(id)
         if already_in(cursor, id, Location):
-            exitdetected()
-            #maincanvas.itemconfigure(exitid, state='normal')
             #Update data
             update_location(cursor, "Raspberry Reader", id, "OUTSIDE")
 	    #Update history data related to the Prototype
             add_to_history(cursor, id, "OUTSIDE")
             print("OUTSIDE")
+            #exitdetected()
+            maincanvas.itemconfigure(exitid, state='normal')
             #maincanvas.after(1500,lambda: maincanvas.itemconfigure(exitid, state='hidden'))
         else:
-            entrydetected()
-            #maincanvas.itemconfigure(entryid, state='normal')
             print(Location)
             #Update data
             update_location(cursor, "Raspberry Reader", id, Location)
             #Update history data related to the Prototype
             add_to_history(cursor, id, Location)
+            #entrydetected()
+            maincanvas.itemconfigure(entryid, state='normal')
             #maincanvas.after(1500,maincanvas.itemconfigure(entryid, state='hidden'))
 
         cnx.commit()   # uploads data to the database
@@ -83,23 +87,56 @@ maincanvas.pack()
 Location = "Building 3, Floor 1"
 reader = SimpleMFRC522()
 name = '0'
-interaction = 2
+interaction = 3
 		
 while 1:
     #maincanvas.after(1500,lambda: maincanvas.itemconfigure(entryid, state='hidden'))
     #maincanvas.after(1500,lambda: maincanvas.itemconfigure(exitid, state='hidden'))
     print("Waiting for tag")
-    id,name = reader.read()
-    #id = input()
-    #name = input()
+    #id,name = reader.read()
+    id = input()
+    name = input()
     if name != '0':
-        mainexec(Location,id,name)
+        cnx,cursor = DBconnection()
+        print(id)
+        if already_in(cursor, id, Location):
+            #Update data
+            update_location(cursor, "Raspberry Reader", id, "OUTSIDE")
+	    #Update history data related to the Prototype
+            add_to_history(cursor, id, "OUTSIDE")
+            print("OUTSIDE")
+            #exitdetected()
+            interaction = 0
+            #maincanvas.itemconfigure(exitid, state='normal')
+            #maincanvas.after(1500,lambda: maincanvas.itemconfigure(exitid, state='hidden'))
+        elif already_in(cursor, id, Location) == False:
+            print(Location)
+            #Update data
+            update_location(cursor, "Raspberry Reader", id, Location)
+            #Update history data related to the Prototype
+            add_to_history(cursor, id, Location)
+            #entrydetected()
+            interaction = 1
+            #maincanvas.itemconfigure(entryid, state='normal')
+            #maincanvas.after(1500,maincanvas.itemconfigure(entryid, state='hidden'))
+
+        cnx.commit()   # uploads data to the database
         #prototracker.after(30000, mainexec(Location))
-        
+        #GPIO.cleanup()
+        cursor.close() # Closes the cursor(To be ignored for now)
+        name = '0'
+
+    if interaction == 0:
+        exitdetected()
+    elif interaction == 1:
+        entrydetected()
+    elif interaction == 2:
+        normalstate()
+    
     #maincanvas.after(1500,normalstate())
     prototracker.update_idletasks()
     prototracker.update()
-    time.sleep(0.01)
+    #time.sleep(0.01)
 
 
 
