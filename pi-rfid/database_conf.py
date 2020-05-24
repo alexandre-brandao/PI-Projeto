@@ -73,9 +73,10 @@ def already_in(cursor, TagID, CurrentLocation):
 	data = cursor.fetchall()
 	
 	
-	
+	if len(data)==0:
+		print(data)	
 
-	if len(data[0][0]) != 0 and  data[0][0] == CurrentLocation: 
+	if len(data) != 0 and data[0][0] == CurrentLocation: 
 		return True
 
 	else :
