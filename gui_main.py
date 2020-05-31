@@ -17,14 +17,17 @@ def initorder():
 def normalstate():
     maincanvas.itemconfigure(entryid, state='hidden')
     maincanvas.itemconfigure(exitid, state='hidden')
+    
 
 def entrydetected():
     maincanvas.itemconfigure(entryid, state='normal')
-    maincanvas.after(1500,lambda: maincanvas.itemconfigure(entryid, state='hidden'))
+    prototracker.after(1500,lambda: maincanvas.itemconfigure(entryid, state='hidden'))
+    
+
 
 def exitdetected():
     maincanvas.itemconfigure(exitid, state='normal')
-    maincanvas.after(1500,lambda: maincanvas.itemconfigure(exitid, state='hidden'))
+    prototracker.after(1500,lambda: maincanvas.itemconfigure(exitid, state='hidden'))
 
 def mainexec(Location,id,name):
     Connected = 0
@@ -43,7 +46,7 @@ def mainexec(Location,id,name):
             #maincanvas.itemconfigure(exitid, state='normal')
             #Update data
             update_location(cursor, "Raspberry Reader", id, "OUTSIDE")
-	    #Update history data related to the Prototype
+            #Update history data related to the Prototype
             add_to_history(cursor, id, "OUTSIDE")
             print("OUTSIDE")
             #maincanvas.after(1500,lambda: maincanvas.itemconfigure(exitid, state='hidden'))
@@ -90,22 +93,24 @@ Location = "Building 3, Floor 1"
 reader = SimpleMFRC522()
 name = '0'
 initvar = 0
+	
 
-prototracker.update_idletasks()
-prototracker.update()
-time.sleep(0.01)
-		
 while 1:
+    prototracker.update_idletasks()
+    time.sleep(1.5)
+    prototracker.update()
+    
     #maincanvas.after(1500,lambda: maincanvas.itemconfigure(entryid, state='hidden'))
     #maincanvas.after(1500,lambda: maincanvas.itemconfigure(exitid, state='hidden'))
     print("Waiting for tag")
     id,name = reader.read()
+    prototracker.update()
     #id = input()
     #name = input()
     if name != '0':
         mainexec(Location,id,name)
         #prototracker.after(30000, mainexec(Location))
-        #maincanvas.after(1500,normalstate())
+        #maincanvas.after(3500,normalstate())
 
 
 
