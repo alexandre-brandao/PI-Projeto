@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Altice ProtoTracker</string>
+    <string name="title_activity_searched">activity_searched</string>
+    <string-array name="Spinner_buildings">
+        <item>Building 0</item>
+        <item>Building 1</item>
+        <item>Building 2</item>
+        <item>Building 3</item>
+        <item>Building 4</item>
+        <item>Building 5</item>
+        <item>Building 6</item>
+        <item>Building 7</item>
+    </string-array>
+    <string-array name="Spinner_floors">
+        <item>Floor 0</item>
+        <item>Floor 1</item>
+        <item>Floor 2</item>
+        <item>Floor 3</item>
+        <item>Floor 4</item>
+    </string-array>
+</resources>
