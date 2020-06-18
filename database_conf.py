@@ -4,7 +4,7 @@
 import sys
 import time
 import mysql.connector
-#Notes: Instead if returning db, try to return just the cursor do f:DBconnection
+#Notes: Instead of returning db, try to return just the cursor do f:DBconnection
 
 #Settings
 # ACTIVE_HISTORY = 1; #Uncomment for history
@@ -48,7 +48,6 @@ def add_to_history(cursor, TagID, Location, ACTIVE_HISTORY=0):
 
 	data = (TagID, Location, DATE_TIME)
 
-
 	cursor.execute(insert_stmt, data)
 
 	# ACTIVE HISTORY CHECK FLAG
@@ -60,7 +59,6 @@ def add_to_history(cursor, TagID, Location, ACTIVE_HISTORY=0):
 		for x in cursor.fetchall() :
 			print(x)
 		print("-------------------------")
-
 
 
 #Check if the device if in the building
