@@ -38,7 +38,7 @@ def mainexec(Location,id,name):
 
     try:
         print(id)
-        if already_in(cursor, id, Location):
+        if already_in(cursor, id, Location)==1:
             exitdetected()
             #maincanvas.itemconfigure(exitid, state='normal')
             #Update data
@@ -47,7 +47,7 @@ def mainexec(Location,id,name):
             add_to_history(cursor, id, "OUTSIDE")
             print("OUTSIDE")
             #maincanvas.after(1500,lambda: maincanvas.itemconfigure(exitid, state='hidden'))
-        else:
+        elif already_in(cursor, id, Location)==0:
             entrydetected()
             #maincanvas.itemconfigure(entryid, state='normal')
             print(Location)
@@ -56,6 +56,8 @@ def mainexec(Location,id,name):
             #Update history data related to the Prototype
             add_to_history(cursor, id, Location)
             #maincanvas.after(1500,maincanvas.itemconfigure(entryid, state='hidden'))
+        else :
+            print("INVALID TAG\n")
 
         cnx.commit()   # uploads data to the database
 
@@ -86,7 +88,20 @@ maincanvas.pack()
 #initbutton = Button(prototracker, text = "Iniciar", command = initorder)
 #initbutton_window = maincanvas.create_window(600,250,anchor = NW, window = initbutton)
 
-Location = "Building 3, Floor 1"
+print("Qual a localização deste leitor?\n")
+print("Edifício (entre 0 e 10) :")
+building = input()
+while(int(building) < 0 or int(building) > 10):
+    print("Número de edificio inválido: ")
+    building = input()
+print("\nAndar (entre 0 e 10) : ")
+floor = input()
+while(int(floor) < 0 or int(floor) > 10):
+    print("Número de andar inválido: ")
+    floor = input()
+Location = "Building "+str(building)+", Floor "+str(floor)
+print(Location+"\n")
+
 reader = SimpleMFRC522()
 name = '0'
 initvar = 0

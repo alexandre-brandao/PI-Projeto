@@ -4,9 +4,9 @@
 # Date   : 29/03/2020
 
 
-import RPi.GPIO as GPIO
+#import RPi.GPIO as GPIO
 from database_conf import *
-from  mfrc522 import SimpleMFRC522
+#from  mfrc522 import SimpleMFRC522
 
 #General Data
 Connected = 0
@@ -14,7 +14,7 @@ Location = "Building 3, Floor 1"
 
 while Connected == 0:
 	try:
-		reader = SimpleMFRC522()
+		#reader = SimpleMFRC522()
 		cnx, cursor = DBconnection()
 		Connected = 1
 	finally:
@@ -22,27 +22,31 @@ while Connected == 0:
 		
 while 1:
 	try:
-		id,name = reader.read() # Wait for TAG
+		#id,name = reader.read() # Wait for TAG
+		id = input()
+		name = input()
 		print(id)
 		
-		if already_in(cursor, id, Location):
+		if already_in(cursor, id, Location) == 1:
 			#Update data
 			update_location(cursor, "Raspberry Reader", id, "OUTSIDE")
 			#Update history data related to the Prototype
 			add_to_history(cursor, id, "OUTSIDE")
 			print("OUTSIDE\n")
-		else:
+		elif already_in(cursor, id, Location) == 0:
 			print(Location+"\n")
 			#Update data
 			update_location(cursor, "Raspberry Reader", id, Location)
 			#Update history data related to the Prototype
 			add_to_history(cursor, id, Location)
+		else :
+			print("INVALID TAG\n")
 			
 		cnx.commit()   # uploads data to the database
 		
 		
 	finally:
-		GPIO.cleanup()
+		#GPIO.cleanup()
 		print("", end='')
 
 cursor.close() # Closes the cursor(To be ignored for now)
