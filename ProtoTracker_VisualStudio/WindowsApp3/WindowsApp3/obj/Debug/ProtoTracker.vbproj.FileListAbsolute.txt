@@ -1,0 +1,49 @@
+C:\Users\Fábio Almeida\source\repos\WindowsApp3\WindowsApp3\obj\Debug\ProtoTracker.vbprojAssemblyReference.cache
+C:\Users\Fábio Almeida\source\repos\WindowsApp3\WindowsApp3\obj\Debug\ProtoTracker.Resources.resources
+C:\Users\Fábio Almeida\source\repos\WindowsApp3\WindowsApp3\obj\Debug\ProtoTracker.ProtoTracker.resources
+C:\Users\Fábio Almeida\source\repos\WindowsApp3\WindowsApp3\obj\Debug\ProtoTracker.ProtoTracker.pt.resources
+C:\Users\Fábio Almeida\source\repos\WindowsApp3\WindowsApp3\obj\Debug\ProtoTracker.vbproj.GenerateResource.cache
+C:\Users\Fábio Almeida\source\repos\WindowsApp3\WindowsApp3\bin\Debug\ProtoTracker.exe.config
+C:\Users\Fábio Almeida\source\repos\WindowsApp3\WindowsApp3\bin\Debug\ProtoTracker.exe.manifest
+C:\Users\Fábio Almeida\source\repos\WindowsApp3\WindowsApp3\bin\Debug\ProtoTracker.application
+C:\Users\Fábio Almeida\source\repos\WindowsApp3\WindowsApp3\bin\Debug\ProtoTracker.exe
+C:\Users\Fábio Almeida\source\repos\WindowsApp3\WindowsApp3\bin\Debug\ProtoTracker.pdb
+C:\Users\Fábio Almeida\source\repos\WindowsApp3\WindowsApp3\bin\Debug\ProtoTracker.xml
+C:\Users\Fábio Almeida\source\repos\WindowsApp3\WindowsApp3\bin\Debug\pt\ProtoTracker.resources.dll
+C:\Users\Fábio Almeida\source\repos\WindowsApp3\WindowsApp3\bin\Debug\MySql.Data.dll
+C:\Users\Fábio Almeida\source\repos\WindowsApp3\WindowsApp3\bin\Debug\Google.Protobuf.dll
+C:\Users\Fábio Almeida\source\repos\WindowsApp3\WindowsApp3\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Fábio Almeida\source\repos\WindowsApp3\WindowsApp3\bin\Debug\Renci.SshNet.dll
+C:\Users\Fábio Almeida\source\repos\WindowsApp3\WindowsApp3\obj\Debug\pt\ProtoTracker.resources.dll
+C:\Users\Fábio Almeida\source\repos\WindowsApp3\WindowsApp3\obj\Debug\ProtoTracker.exe.manifest
+C:\Users\Fábio Almeida\source\repos\WindowsApp3\WindowsApp3\obj\Debug\ProtoTracker.application
+C:\Users\Fábio Almeida\source\repos\WindowsApp3\WindowsApp3\obj\Debug\ProtoTracker.vbproj.CopyComplete
+C:\Users\Fábio Almeida\source\repos\WindowsApp3\WindowsApp3\obj\Debug\ProtoTracker.exe
+C:\Users\Fábio Almeida\source\repos\WindowsApp3\WindowsApp3\obj\Debug\ProtoTracker.xml
+C:\Users\Fábio Almeida\source\repos\WindowsApp3\WindowsApp3\obj\Debug\ProtoTracker.pdb
+C:\Users\andre\source\repos\WindowsApp3\WindowsApp3\bin\Debug\ProtoTracker.exe.config
+C:\Users\andre\source\repos\WindowsApp3\WindowsApp3\bin\Debug\ProtoTracker.exe.manifest
+C:\Users\andre\source\repos\WindowsApp3\WindowsApp3\bin\Debug\ProtoTracker.application
+C:\Users\andre\source\repos\WindowsApp3\WindowsApp3\bin\Debug\ProtoTracker.exe
+C:\Users\andre\source\repos\WindowsApp3\WindowsApp3\bin\Debug\ProtoTracker.pdb
+C:\Users\andre\source\repos\WindowsApp3\WindowsApp3\bin\Debug\ProtoTracker.xml
+C:\Users\andre\source\repos\WindowsApp3\WindowsApp3\bin\Debug\pt\ProtoTracker.resources.dll
+C:\Users\andre\source\repos\WindowsApp3\WindowsApp3\bin\Debug\MySql.Data.dll
+C:\Users\andre\source\repos\WindowsApp3\WindowsApp3\bin\Debug\Google.Protobuf.dll
+C:\Users\andre\source\repos\WindowsApp3\WindowsApp3\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\andre\source\repos\WindowsApp3\WindowsApp3\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\andre\source\repos\WindowsApp3\WindowsApp3\bin\Debug\Renci.SshNet.dll
+C:\Users\andre\source\repos\WindowsApp3\WindowsApp3\bin\Debug\MySql.Data.xml
+C:\Users\andre\source\repos\WindowsApp3\WindowsApp3\obj\Debug\ProtoTracker.vbprojAssemblyReference.cache
+C:\Users\andre\source\repos\WindowsApp3\WindowsApp3\obj\Debug\ProtoTracker.Resources.resources
+C:\Users\andre\source\repos\WindowsApp3\WindowsApp3\obj\Debug\ProtoTracker.ProtoTracker.resources
+C:\Users\andre\source\repos\WindowsApp3\WindowsApp3\obj\Debug\ProtoTracker.ProtoTracker.pt.resources
+C:\Users\andre\source\repos\WindowsApp3\WindowsApp3\obj\Debug\ProtoTracker.vbproj.GenerateResource.cache
+C:\Users\andre\source\repos\WindowsApp3\WindowsApp3\obj\Debug\ProtoTracker.vbproj.CoreCompileInputs.cache
+C:\Users\andre\source\repos\WindowsApp3\WindowsApp3\obj\Debug\pt\ProtoTracker.resources.dll
+C:\Users\andre\source\repos\WindowsApp3\WindowsApp3\obj\Debug\ProtoTracker.exe.manifest
+C:\Users\andre\source\repos\WindowsApp3\WindowsApp3\obj\Debug\ProtoTracker.application
+C:\Users\andre\source\repos\WindowsApp3\WindowsApp3\obj\Debug\ProtoTracker.vbproj.CopyComplete
+C:\Users\andre\source\repos\WindowsApp3\WindowsApp3\obj\Debug\ProtoTracker.exe
+C:\Users\andre\source\repos\WindowsApp3\WindowsApp3\obj\Debug\ProtoTracker.xml
+C:\Users\andre\source\repos\WindowsApp3\WindowsApp3\obj\Debug\ProtoTracker.pdb
