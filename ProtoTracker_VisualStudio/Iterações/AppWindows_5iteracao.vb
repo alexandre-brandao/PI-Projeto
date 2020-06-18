@@ -972,7 +972,7 @@ Public Class ProtoTracker
         PanelMostrarProt.Visible = False
         PanelRemove.Visible = False
 
-    End Sub 'feito
+    End Sub
 
     'Função que, depois de inseridos todos os dados necessários, remove o protótipo do sistema
     Private Sub Remove_prot(sender As Object, e As EventArgs) Handles btnConfirmRemove.Click
@@ -1065,7 +1065,7 @@ Public Class ProtoTracker
 
         End If
 
-    End Sub 'feito
+    End Sub 
 
 
 End Class
