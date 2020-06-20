@@ -89,14 +89,9 @@ public class activity_search extends AppCompatActivity {
 
         btnSearchReg.setOnClickListener(v -> {
 
-            if (txtTagSearch.getText().toString().matches("")) {
+            if (txtTagSearch.getText().toString().matches("") && txtIDSearch.getText().toString().matches("")) {
 
-                Toast.makeText(activity_search.this, "Please fill all of the required parameters", Toast.LENGTH_LONG).show();
-                return;
-
-            }else if (txtIDSearch.getText().toString().matches("")){
-
-                Toast.makeText(activity_search.this, "Please fill all of the required parameters", Toast.LENGTH_LONG).show();
+                Toast.makeText(activity_search.this, "Please fill one of the required parameters", Toast.LENGTH_LONG).show();
                 return;
 
             }else{

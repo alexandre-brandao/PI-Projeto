@@ -89,12 +89,7 @@ public class activity_update extends AppCompatActivity {
 
         btnUpdateReg.setOnClickListener(v -> {
 
-            if (txtTagUpdate.getText().toString().matches("")){
-
-                Toast.makeText(activity_update.this, "Please fill all of the required parameters", Toast.LENGTH_LONG).show();
-                return;
-
-            } else if (txtIDUpdate.getText().toString().matches("")){
+            if (txtTagUpdate.getText().toString().matches("") && txtIDUpdate.getText().toString().matches("")){
 
                 Toast.makeText(activity_update.this, "Please fill all of the required parameters", Toast.LENGTH_LONG).show();
                 return;
@@ -113,6 +108,7 @@ public class activity_update extends AppCompatActivity {
 
                 createHistory();
                 updatePrototype();
+
                 finish();
                 if (SharedPrefManager.getInstance(this).getUserAccess().matches("1")){
                     Intent intent = new Intent(this, activity_admin_menu.class);
@@ -128,10 +124,24 @@ public class activity_update extends AppCompatActivity {
 
     private void createHistory(){
 
+        //String tag_code_temp;
         final String tag_code = txtTagUpdate.getText().toString().trim();
         final String location = selectedBuildingUp + ", " + selectedFloorUp;
+        final String prototype_id = txtIDUpdate.getText().toString().trim();
         final String date_reg;
         //final String time_reg;
+
+        /*if (txtTagUpdate.getText().toString().matches("")){
+
+            tag_code_temp = "0";
+
+        } else {
+
+            tag_code_temp = txtTagUpdate.getText().toString().trim();
+
+        }
+
+        final String tag_code = tag_code_temp;*/
 
         Date date = new Date();
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -172,6 +182,7 @@ public class activity_update extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String,String> params = new HashMap<>();
                 params.put("tag_code", tag_code);
+                params.put("prototype_id", prototype_id);
                 params.put("location", location);
                 params.put("date", date_reg);
                 //params.put("time", time_reg);

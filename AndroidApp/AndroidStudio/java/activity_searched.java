@@ -82,6 +82,7 @@ public class activity_searched extends AppCompatActivity {
     private void searchHistory(String tag_code, Integer n){
 
         final String tagCode = tag_code;
+        //final String prototypeid = prototype_id;
 
         //progressDialog.setMessage("Searching History...");
         //progressDialog.show();
@@ -130,6 +131,7 @@ public class activity_searched extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String,String> params = new HashMap<>();
                 params.put("tag_code", tagCode);
+                //params.put("prototype_id", prototypeid);
                 return params;
             }
         };

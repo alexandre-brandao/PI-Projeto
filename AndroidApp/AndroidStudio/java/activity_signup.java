@@ -84,8 +84,16 @@ public class activity_signup extends AppCompatActivity {
 
             } else if (txtPhoneSignUp.getText().toString().length() < 9 || txtPhoneSignUp.getText().toString().length() > 9){
 
-                Toast.makeText(activity_signup.this, "Phone number is not 9 digits", Toast.LENGTH_LONG).show();
-                return;
+                if (txtPhoneSignUp.getText().toString().length() == 0){
+
+                    registerUser();
+
+                } else {
+
+                    Toast.makeText(activity_signup.this, "Phone number is not 9 digits", Toast.LENGTH_LONG).show();
+                    return;
+
+                }
 
             } else if (txtPasswordSignUp.getText().toString().matches(txtRepeatPasswordSignUp.getText().toString())){
 

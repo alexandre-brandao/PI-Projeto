@@ -137,6 +137,7 @@ public class activity_register extends AppCompatActivity{
 
         final String tag_code = txtTagRegister.getText().toString().trim();
         final String location = selectedBuildingReg + ", " + selectedFloorReg;
+        final String prototype_id = txtIDRegister.getText().toString().trim();
         final String date_reg;
         //final String time_reg;
 
@@ -179,6 +180,7 @@ public class activity_register extends AppCompatActivity{
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String,String> params = new HashMap<>();
                 params.put("tag_code", tag_code);
+                params.put("prototype_id", prototype_id);
                 params.put("location", location);
                 params.put("date", date_reg);
                 //params.put("time", time_reg);

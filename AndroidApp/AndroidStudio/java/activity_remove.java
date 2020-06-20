@@ -46,14 +46,9 @@ public class activity_remove extends AppCompatActivity {
 
         btnRemoveReg.setOnClickListener(v -> {
 
-            if (txtTagRemove.getText().toString().matches("")){
+            if (txtTagRemove.getText().toString().matches("") && txtIDRemove.getText().toString().matches("")){
 
-                Toast.makeText(activity_remove.this, "Please fill all of the required parameters", Toast.LENGTH_LONG).show();
-                return;
-
-            } else if (txtIDRemove.getText().toString().matches("")){
-
-                Toast.makeText(activity_remove.this, "Please fill all of the required parameters", Toast.LENGTH_LONG).show();
+                Toast.makeText(activity_remove.this, "Please fill one of the required parameters", Toast.LENGTH_LONG).show();
                 return;
 
             } else {

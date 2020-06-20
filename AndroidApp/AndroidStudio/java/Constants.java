@@ -2,7 +2,7 @@ package com.example.mainaltice;
 
 public class Constants {
 
-    private static final String ROOT_URL = "http://192.168.68.103/Android/v1/";
+    private static final String ROOT_URL = "http://192.168.1.17/Android/v1/";
 
     public static final String URL_REGISTER_USER = ROOT_URL+"registerUser.php";
     public static final String URL_REGISTER_PROTOTYPE = ROOT_URL+"registerPrototype.php";
