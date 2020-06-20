@@ -3,6 +3,9 @@
 ## Pasta ReaderModule
 Contêm o programa em python que corre todo o funcionamento do módulo de leitura
 
+## Pasta AndroidApp
+Dentro desta pasta estão os ficheiros do desenvolvimento da aplicação Android, ficheiros da ligação desta com a base de dados e o ficheiro de instalação
+
 ## Pasta WindowsApp
 
 ### ProtoTracker_VisualStudio
