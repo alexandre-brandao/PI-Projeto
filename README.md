@@ -1,5 +1,8 @@
 # PI-Projeto
 
+## Pasta ReaderModule
+Contêm o programa em python que corre todo o funcionamento do módulo de leitura
+
 ## Pasta WindowsApp
 
 ### ProtoTracker_VisualStudio
