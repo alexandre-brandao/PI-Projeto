@@ -14,13 +14,13 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 		//Operation
 		$db = new DbOperations();
 
-		$numrows = $db->searchHistory($_POST['tag_code']);
+		$numrows = $db->searchHistory($_POST['tag_code'], $_POST['tag_code']);
 
 		if($numrows>0){
 
 			for($i = 0; $i < $numrows; $i++){
 				$response[$i] = array();
-				$user = $db->getHistoryByTag($_POST['tag_code']);
+				$user = $db->getHistoryByTag($_POST['tag_code'], $_POST['tag_code']);
 				$response[$i]['error'] = false;
 				$response[$i]['tag_code'] = $user[$i]['tag_code'];
 				$response[$i]['location'] = $user[$i]['location'];
