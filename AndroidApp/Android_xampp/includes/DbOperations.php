@@ -56,7 +56,7 @@
 		}
 
 		public function searchPrototype($tagcode, $prototypeid){
-			$stmt = $this->con->prepare("SELECT name FROM prototype WHERE tag_code = ? AND prototype_id = ?");
+			$stmt = $this->con->prepare("SELECT name FROM prototype WHERE tag_code = ? OR prototype_id = ?");
 			$stmt->bind_param("ss", $tagcode, $prototypeid);
 			$stmt->execute();
 			$stmt->store_result();
@@ -64,15 +64,15 @@
 		}
 
 		public function getPrototypeByTag($tagcode, $prototypeid){
-			$stmt = $this->con->prepare("SELECT * FROM prototype WHERE tag_code = ? AND prototype_id = ?");
+			$stmt = $this->con->prepare("SELECT * FROM prototype WHERE tag_code = ? OR prototype_id = ?");
 			$stmt->bind_param("ss", $tagcode, $prototypeid);
 			$stmt->execute();
 			return $stmt->get_result()->fetch_assoc();
 		}
 
-		public function searchHistory($tagcode){
-			$stmt = $this->con->prepare("SELECT id FROM history WHERE tag_code = ?");
-			$stmt->bind_param("s", $tagcode);
+		public function searchHistory($tagcode, $tagcode2){
+			$stmt = $this->con->prepare("SELECT id FROM history WHERE tag_code = ? OR tag_code = ?");
+			$stmt->bind_param("ss", $tagcode, $tagcode2);
 			$stmt->execute();
 			$stmt->store_result();
 			return $stmt->num_rows;
@@ -104,8 +104,8 @@
 			return $response;
 		}
 
-		public function getHistoryByTag($tagcode){
-			$q = "SELECT * FROM history WHERE tag_code = {$tagcode} ORDER BY date DESC";
+		public function getHistoryByTag($tagcode, $tagcode2){
+			$q = "SELECT * FROM history WHERE tag_code = {$tagcode} OR tag_code = {$tagcode2} ORDER BY date DESC";
 			
 			$stmt = $this->con->query($q);
 			
@@ -123,35 +123,69 @@
 		}
 
 		//Create a new history entry
-		public function createHistory($tagcode, $location, $date){
+		public function createHistory($tagcode, $tagcode2, $prototypeid, $location, $date){
 
-			$numrows = $this->searchHistory($tagcode);
+			$numrows = $this->searchHistory($tagcode, $tagcode2);
+
+			#$numrows2 = $this->searchHistory($tagcode2, $prototypeid);
 
 			if($numrows>2){
 				$response = array();
 				for($i = 0; $i < $numrows; $i++){
 					$response[$i] = array();
 				}
-				$response = $this->getHistoryByTag($tagcode);
+				$response = $this->getHistoryByTag($tagcode, $tagcode2);
 				$oldid = $response[$numrows-2]['id'];
 				$this->removeHistory($oldid,$tagcode);
 			}
 
-			//Input Parameters
-			$stmt = $this->con->prepare("INSERT INTO `history` (`id`, `tag_code`, `location`, `date`) VALUES (NULL, ?, ?, ?);");
-			$stmt->bind_param("sss", $tagcode, $location, $date);
+			#if($numrows2>2){
+			#	$response = array();
+			#	for($i = 0; $i < $numrows; $i++){
+			#		$response[$i] = array();
+			#	}
+			#	$response = $this->getHistoryByTag($tagcode, $tagcode2, $prototypeid);
+			#	$oldid = $response[$numrows-2]['id'];
+			#	$this->removeHistory($oldid,$tagcode);
+			#}
 
-			if($stmt->execute()){
-				return 1;
+			if($tagcode = $tagcode2){
+
+				//Input Parameters
+				$stmt = $this->con->prepare("INSERT INTO `history` (`id`, `tag_code`, `location`, `date`) VALUES (NULL, ?, ?, ?);");
+				$stmt->bind_param("sss", $tagcode2, $location, $date);
+				$stmt->execute();
+
 			}else{
-				return 2;
+
+				//Input Parameters
+				$stmt = $this->con->prepare("INSERT INTO `history` (`id`, `tag_code`, `location`, `date`) VALUES (NULL, ?, ?, ?);");
+				$stmt->bind_param("sss", $tagcode, $location, $date);
+				$stmt->execute();
+
+				//Input Parameters
+				$stmt = $this->con->prepare("INSERT INTO `history` (`id`, `tag_code`, `location`, `date`) VALUES (NULL, ?, ?, ?);");
+				$stmt->bind_param("sss", $tagcode2, $location, $date);
+				$stmt->execute();
+
 			}
+
+			return 1;
 			
+		}
+
+		public function getTagById($prototypeid){
+
+			$stmt = $this->con->prepare("SELECT tag_code FROM prototype WHERE prototype_id = ?");
+			$stmt->bind_param("s", $prototypeid);
+			$stmt->execute();
+			return $stmt->get_result()->fetch_assoc();
+
 		}
 
 		public function removeHistory($id, $tagcode){
 
-			if($this->searchHistory($tagcode)>2){
+			if($this->searchHistory($tagcode, $tagcode)>2){
 				$stmt = $this->con->prepare("DELETE FROM `history` WHERE id = ? AND tag_code = ?");
 				$stmt->bind_param("ss", $id, $tagcode);
 				if($stmt->execute()){
@@ -195,7 +229,7 @@
 		public function removePrototype($tagcode, $prototypeid){
 
 			if($this->isPrototypeExist($tagcode,$prototypeid)){
-				$stmt = $this->con->prepare("DELETE FROM `prototype` WHERE tag_code = ? AND prototype_id = ?");
+				$stmt = $this->con->prepare("DELETE FROM `prototype` WHERE tag_code = ? OR prototype_id = ?");
 				$stmt->bind_param("ss", $tagcode, $prototypeid);
 				if($stmt->execute()){
 					return 1;
@@ -210,7 +244,7 @@
 		public function updatePrototype($tagcode, $prototypeid, $location, $device){
 
 			if($this->isPrototypeExist($tagcode,$prototypeid)){
-				$stmt = $this->con->prepare("UPDATE `prototype` SET `location` = ? , `device` = ? WHERE tag_code = ? AND prototype_id = ?");
+				$stmt = $this->con->prepare("UPDATE `prototype` SET `location` = ? , `device` = ? WHERE tag_code = ? OR prototype_id = ?");
 				$stmt->bind_param("ssss", $location, $device, $tagcode, $prototypeid);
 				if($stmt->execute()){
 					return 1;
@@ -225,8 +259,16 @@
 
 		//Verifies if there is already the same tag code or prototype id
 		private function isPrototypeExist($tagcode, $prototypeid){
-			$stmt = $this->con->prepare("SELECT name FROM prototype WHERE tag_code = ? AND prototype_id = ?");
+			$stmt = $this->con->prepare("SELECT name FROM prototype WHERE tag_code = ? OR prototype_id = ?");
 			$stmt->bind_param("ss", $tagcode, $prototypeid);
+			$stmt->execute();
+			$stmt->store_result();
+			return $stmt->num_rows > 0;
+		}
+
+		public function isPrototypeExistID($prototypeid){
+			$stmt = $this->con->prepare("SELECT name FROM prototype WHERE prototype_id = ?");
+			$stmt->bind_param("s", $prototypeid);
 			$stmt->execute();
 			$stmt->store_result();
 			return $stmt->num_rows > 0;
