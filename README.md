@@ -1,4 +1,5 @@
-# PI-Projeto
+# Identificação, Cadastro e Rastreabilidade de Produtos - Projeto Industrial
+# Equipa 11
 
 ## Pasta ReaderModule
 Contêm o programa em python que corre todo o funcionamento do módulo de leitura
